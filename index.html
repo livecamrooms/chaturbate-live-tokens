@@ -3,23 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sign up free • Buy Chaturbate tokens in seconds • Tip live models RIGHT NOW and control the show. Thousands tipping live.">
-    <meta name="keywords" content="chaturbate live, buy chaturbate tokens, chaturbate free signup, tip chaturbate models, chaturbate private shows, live chaturbate cams">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://YOURUSERNAME.github.io/chaturbate-live-tokens/">
-    
-    <!-- Open Graph / Social -->
+    <meta name="description" content="Sign up free • Buy Chaturbate tokens in seconds • Tip live models RIGHT NOW and own the show. Thousands tipping live.">
+    <meta name="keywords" content="chaturbate live, buy chaturbate tokens, chaturbate free signup, tip chaturbate models">
+    <link rel="canonical" href="https://livecamrooms.github.io/chaturbate-live-tokens/">
     <meta property="og:title" content="Chaturbate Live • Buy Tokens & Tip Her NOW">
-    <meta property="og:description" content="Zero signup • Instant tokens • Tip live models and make them yours. Join 1.2M+ guys spending right now.">
-    <meta property="og:image" content="https://chaturbate.com/images/logo.png">
-    <meta property="og:url" content="https://YOURUSERNAME.github.io/chaturbate-live-tokens/">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chaturbate Live • Buy Tokens & Tip Her NOW">
-    <meta name="twitter:description" content="Sign up free • Buy tokens instantly • Tip live and watch her react to YOU">
-
+    <meta property="og:description" content="Don't just watch — buy tokens and control the show">
+    <meta property="og:url" content="https://livecamrooms.github.io/chaturbate-live-tokens/">
     <title>Chaturbate Live • Buy Tokens & Tip Models Right Now</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -31,20 +20,34 @@
     </style>
 </head>
 <body class="text-white font-sans">
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur z-50 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center gap-8 text-sm font-bold">
+            <a href="index.html" class="text-pink-400">HOME</a>
+            <a href="tokens.html">BUY TOKENS</a>
+            <a href="models.html">MODELS</a>
+            <a href="private-shows.html">PRIVATE SHOWS</a>
+        </div>
+    </nav>
 
-    <!-- HERO (same high-conversion psychology) -->
-    <header class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- HERO -->
+    <header class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
         <div class="text-center z-10 px-6 max-w-4xl">
-            <div class="inline-flex items-center gap-2 bg-red-600/80 text-xs font-bold px-6 py-2 rounded-full mb-6 pulse">
-                🔥 LIVE RIGHT NOW — 12,483 guys tipping
-            </div>
+            <div class="inline-flex items-center gap-2 bg-red-600/80 text-xs font-bold px-6 py-2 rounded-full mb-6 pulse">🔥 LIVE RIGHT NOW — Thousands tipping</div>
             <h1 class="text-6xl md:text-7xl font-black neon mb-2">DON'T JUST WATCH</h1>
-            <h2 class="text-5xl md:text-6xl font-bold text-pink-400 mb-4">BUY CHATURBATE TOKENS & OWN THE SHOW</h2>
-            <!-- ... rest of your hero exactly as before ... -->
+            <p class="text-5xl md:text-6xl font-bold text-pink-400 mb-4">BUY TOKENS & OWN THE SHOW</p>
+            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="https://chaturbate.com/auth/signup/?campaign=T2CSW" class="bg-gradient-to-r from-pink-600 to-purple-600 px-16 py-8 rounded-3xl text-4xl font-black shadow-2xl hover:scale-105">BUY TOKENS NOW →</a>
+                <a href="https://chaturbate.com/in/?tour=8a7f&campaign=T2CSW" class="bg-white/10 hover:bg-white/20 border border-white/30 px-12 py-8 rounded-3xl text-3xl font-bold">WATCH FREE FIRST</a>
+            </div>
         </div>
     </header>
 
-    <!-- ... keep the rest of your sections exactly as in the last version ... -->
+    <!-- ROOMS -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-5xl font-black text-center neon mb-8">LIVE MODELS WAITING FOR YOUR TOKENS</h2>
+        <div id="rooms" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></div>
+    </section>
 
     <script>
         fetch('https://chaturbate.com/api/public/affiliates/onlinerooms/?wm=T2CSW')
@@ -56,11 +59,11 @@
                     card.className = 'glass rounded-3xl overflow-hidden hover:scale-105 transition-all group';
                     card.innerHTML = `
                         <a href="https://chaturbate.com/${room.username}/?campaign=T2CSW" target="_blank" class="block">
-                            <div class="relative">
-                                <img src="${room.image_url}" alt="${room.username} live Chaturbate cam - tip her now" class="w-full h-64 object-cover">
-                                <div class="absolute top-3 right-3 bg-red-600 text-xs px-3 py-1 rounded-full font-bold animate-pulse">LIVE</div>
+                            <img src="${room.image_url}" alt="${room.username} live cam" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold">${room.username}</h3>
+                                <div class="mt-4 bg-pink-600 py-4 rounded-2xl font-bold text-center">TIP HER NOW →</div>
                             </div>
-                            <!-- ... rest unchanged ... -->
                         </a>
                     `;
                     container.appendChild(card);
@@ -68,20 +71,7 @@
             });
     </script>
 
-    <!-- JSON-LD Structured Data (helps Google understand it's a live cam directory) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Chaturbate Live Tokens",
-      "url": "https://YOURUSERNAME.github.io/chaturbate-live-tokens/",
-      "description": "Buy Chaturbate tokens and tip live models instantly",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://YOURUSERNAME.github.io/chaturbate-live-tokens/?search={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
+    <!-- Footer -->
+    <footer class="py-12 text-center text-xs text-gray-500">18+ only • Affiliate links • Free to sign up</footer>
 </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy Chaturbate tokens instantly • Best prices • Sign up free and start tipping live models in seconds.">
+    <meta name="keywords" content="buy chaturbate tokens, chaturbate token prices, how to buy chaturbate tokens, chaturbate tokens cheap">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://YOURUSERNAME.github.io/chaturbate-live-tokens/tokens.html">
+    
+    <meta property="og:title" content="Buy Chaturbate Tokens • Instant & Secure">
+    <meta property="og:description" content="Sign up free • Buy tokens in 1 click • Tip live models RIGHT NOW">
+    <meta property="og:image" content="https://chaturbate.com/images/logo.png">
+    
+    <title>Buy Chaturbate Tokens • Instant Tipping Power</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: linear-gradient(135deg, #0f0f23, #1a0033); }
+        .neon { text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff; }
+        .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.15); }
+    </style>
+</head>
+<body class="text-white font-sans">
+
+    <!-- SIMPLE NAV -->
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-lg z-50 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center gap-8 text-sm font-bold">
+            <a href="index.html" class="hover:text-pink-400">HOME</a>
+            <a href="tokens.html" class="text-pink-400">BUY TOKENS</a>
+            <a href="models.html" class="hover:text-pink-400">MODELS</a>
+            <a href="private-shows.html" class="hover:text-pink-400">PRIVATE SHOWS</a>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex items-center justify-center pt-16">
+        <div class="text-center px-6 max-w-4xl">
+            <h1 class="text-6xl md:text-7xl font-black neon">BUY CHATURBATE TOKENS</h1>
+            <p class="text-5xl md:text-6xl font-bold text-pink-400">Instant Power • Tip Her Now</p>
+            <div class="mt-12 bg-gradient-to-r from-pink-600 to-purple-600 px-16 py-8 rounded-3xl inline-block text-4xl font-black">
+                <a href="https://chaturbate.com/auth/signup/?campaign=T2CSW">GET TOKENS IN 10 SECONDS →</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Live rooms (same as index) -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-5xl font-black text-center neon mb-8">LIVE MODELS READY FOR YOUR TOKENS</h2>
+        <div id="rooms" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></div>
+    </section>
+
+    <script>
+        fetch('https://chaturbate.com/api/public/affiliates/onlinerooms/?wm=T2CSW')
+            .then(r => r.json())
+            .then(data => {
+                const container = document.getElementById('rooms');
+                data.slice(0, 16).forEach(room => {
+                    const card = document.createElement('div');
+                    card.className = 'glass rounded-3xl overflow-hidden hover:scale-105 transition-all';
+                    card.innerHTML = `
+                        <a href="https://chaturbate.com/${room.username}/?campaign=T2CSW" target="_blank">
+                            <img src="${room.image_url}" class="w-full h-64 object-cover">
+                            <div class="p-6 text-center">
+                                <div class="text-2xl font-bold">${room.username}</div>
+                                <div class="mt-4 bg-pink-600 py-4 rounded-2xl font-bold">TIP HER NOW →</div>
+                            </div>
+                        </a>
+                    `;
+                    container.appendChild(card);
+                });
+            });
+    </script>
+</body>
+</html>

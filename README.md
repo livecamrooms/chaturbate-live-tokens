@@ -4,7 +4,7 @@
 
 Affiliate-optimized index built for maximum conversions.
 
-Live site: https://YOURUSERNAME.github.io/chaturbate-live-tokens/
+Live site: https://livecamrooms.github.io/chaturbate-live-tokens/
 
 ### Keywords this page targets
 - chaturbate live

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://livecamrooms.github.io/chaturbate-live-tokens/sitemap.xml
